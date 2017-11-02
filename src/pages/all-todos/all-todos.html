@@ -1,0 +1,21 @@
+<ion-header>
+  <ion-navbar color="primary" >
+    <ion-title>
+      Simple Todo List
+    </ion-title>
+  </ion-navbar>
+
+  <ion-toolbar>
+    <ion-title>TodoLists</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-card>
+    <ion-list>
+      <button ion-item *ngFor="let todo of todoList" (click)="goToSelected(todo)">
+        {{ todo.title }}
+      </button>
+    </ion-list>
+  </ion-card>
+</ion-content>
